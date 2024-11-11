@@ -41,7 +41,7 @@ def plot_mesh(value_mesh_list, w1_mesh, w2_mesh, save, show_box, show_axes):
             ipv.pylab.style.axes_off()
 
         ipv.pylab.zlim(mesh.min(), mesh.max())
-        ptp = (mesh - mesh.min()).ptp()
+        ptp = np.ptp((mesh - mesh.min()))
 
         col = []
         for m in mesh:
